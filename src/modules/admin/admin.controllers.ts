@@ -1,18 +1,80 @@
-const getAllUsers = () => {
+import { Request, Response } from "express"
+import { catchAsync } from "../../utils/catchAsync"
+import { adminServices } from "./admin.services"
+import sendResponse from "../../utils/sendResponse"
+import httpStatus from "http-status"
 
-}
+const { getUsersFromDB, updateStatusInDB, getGearsFromDB, getRentalOrders } = adminServices
 
-const updateUserStatus = () => {
+const { OK, CONFLICT } = httpStatus
 
-}
+const getAllUsers = catchAsync(async (req: Request, res: Response) => {
 
-const getAllGears = () => {
+    const users = await getUsersFromDB()
 
-}
+    sendResponse(res, {
+        success: true,
+        statusCode: OK,
+        message: "Users retrieved successfully.",
+        data: {
+            users
+        }
+    })
+})
 
-const getAllRentalOrders = () => {
+const updateUserStatus = catchAsync(async (req: Request, res: Response) => {
 
-}
+    const { id } = req.params
+    const { status } = await req.body
+
+    const updatedUser = await updateStatusInDB(id as string, status)
+
+    if (updatedUser === false) {
+        return sendResponse(res, {
+            success: false,
+            statusCode: CONFLICT,
+            message: `User is already ${status.toLowerCase()}.`,
+        })
+    }
+
+    sendResponse(res, {
+        success: true,
+        statusCode: OK,
+        message: "User updated successfully.",
+        data: {
+            updatedUser
+        }
+    })
+})
+
+const getAllGears = catchAsync(async (req: Request, res: Response) => {
+
+    const gears = await getGearsFromDB()
+
+    sendResponse(res, {
+        success: true,
+        statusCode: OK,
+        message: "Gears retrieved successfully.",
+        data: {
+            gears
+        }
+    })
+
+})
+
+const getAllRentalOrders = catchAsync(async (req: Request, res: Response) => {
+
+    const rentalOrders = await getRentalOrders()
+
+    sendResponse(res, {
+        success: true,
+        statusCode: OK,
+        message: "Rental Orders retrieved successfully.",
+        data: {
+            rentalOrders
+        }
+    })
+})
 
 export const adminControllers = {
     getAllUsers,

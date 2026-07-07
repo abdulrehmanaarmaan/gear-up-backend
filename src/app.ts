@@ -4,8 +4,8 @@ import config from "./config"
 import cors from "cors"
 import { authRoutes } from "./modules/auth/auth.routes"
 import { gearRoutes } from "./modules/gear/gear.routes"
-import { rentalRoutes } from "./modules/rental/rental.routes"
-import { paymentRoutes } from "./modules/payments/payment.routes"
+import { rentalOrderRoutes } from "./modules/rentalOrder/rentalOrder.routes"
+import { paymentRoutes } from "./modules/payment/payment.routes"
 import { providerRoutes } from "./modules/provider/provider.routes"
 import { adminRoutes } from "./modules/admin/admin.routes"
 import { reviewRoutes } from "./modules/review/review.route"
@@ -24,15 +24,15 @@ app.use(cookieParser())
 
 app.use('/api/auth', authRoutes)
 
-app.use('/api/gear', gearRoutes)
+app.use('/api', gearRoutes)
 
-app.use('/api/rentals', rentalRoutes)
+app.use('/api/rentals', rentalOrderRoutes)
 
 app.use('/api/payments', paymentRoutes)
 
 app.use('/api/provider', providerRoutes)
 
-app.use('/api/admins', adminRoutes)
+app.use('/api/admin', adminRoutes)
 
 app.use('/api/reviews', reviewRoutes)
 

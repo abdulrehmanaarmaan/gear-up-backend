@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs"
 import { prisma } from "../../lib/prisma"
 import { ILoginUser, IUser } from "./auth.interfaces"
 import config from "../../config"
-import { createToken } from "../../utils/jwt"
+import { jwtUtils } from "../../utils/jwt"
 
 const { bcrypt_salt_rounds, jwt_access_secret, jwt_access_expires_in, jwt_refresh_secret, jwt_refresh_expires_in } = config
 
@@ -34,7 +34,7 @@ const createUserInDB = async (payload: IUser) => {
 
 const authorizeUserFromDB = async (payload: ILoginUser) => {
 
-    const { email, password } = payload
+    const { email, password: givenPassword } = payload
 
     const result = await prisma.user.findUniqueOrThrow({
         where: {
@@ -42,16 +42,23 @@ const authorizeUserFromDB = async (payload: ILoginUser) => {
         }
     })
 
-    const matchedPassword = await bcrypt.compare(password, result.password)
+    const { password, ...rest } = result
+
+    const matchedPassword = await bcrypt.compare(givenPassword, password)
 
     if (!matchedPassword) {
-        throw new Error("Provided password is invalid.")
+        throw new Error("The password provided is password.")
     }
 
+    const { id, role } = result
+
     const jwtPayload = {
-        id: result?.id,
-        email
+        id,
+        email,
+        role
     }
+
+    const { createToken } = jwtUtils
 
     const accessToken = createToken(
         jwtPayload,
@@ -67,18 +74,25 @@ const authorizeUserFromDB = async (payload: ILoginUser) => {
     )
 
     return {
-        result,
+        rest,
         accessToken,
         refreshToken
     }
 }
 
-const getMyAccountFromDB = () => {
+const getMyDetailsFromDB = async (id: string) => {
 
+    const result = await prisma.user.findUniqueOrThrow({
+        where: {
+            id
+        }
+    })
+
+    return result
 }
 
 export const authServices = {
     createUserInDB,
     authorizeUserFromDB,
-    getMyAccountFromDB
+    getMyDetailsFromDB
 }

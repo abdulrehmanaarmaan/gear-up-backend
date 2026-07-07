@@ -5,13 +5,40 @@ interface JWTPayload {
     email: string
 }
 
-export const createToken = (payload: JWTPayload, jwtSecret: string, expiresIn: string) => {
+const createToken = (payload: JWTPayload, jwtSecret: string, expiresIn: string) => {
 
-    const accessToken = jwt.sign(
-        payload,
-        jwtSecret,
-        { expiresIn } as SignOptions
-    )
+    try {
 
-    return accessToken
+        const accessToken = jwt.sign(
+            payload,
+            jwtSecret,
+            { expiresIn } as SignOptions
+        )
+
+        return accessToken
+    }
+    catch (error: any) {
+        return {
+            error: error.message
+        }
+    }
+}
+
+const verifyToken = async (accessToken: string, jwtSecret: string) => {
+
+    try {
+        const verifiedToken = jwt.verify(accessToken, jwtSecret)
+        return verifiedToken
+    }
+    catch (error: any) {
+        return {
+            error: error.message
+        }
+
+    }
+}
+
+export const jwtUtils = {
+    createToken,
+    verifyToken
 }

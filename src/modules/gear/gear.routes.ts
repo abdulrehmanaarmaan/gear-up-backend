@@ -3,12 +3,12 @@ import { gearControllers } from "./gear.controllers";
 
 const router = Router()
 
-const { getAllGears, getGearDetails, getGearCategories } = gearControllers
+const { getGears, getGearDetails, getGearCategories } = gearControllers
 
-router.get('/', getAllGears)
+router.get('gears/', getGears)
 
-router.get('/:id', getGearDetails)
+router.get('gears/:id', getGearDetails)
 
-router.get('/categories', getGearCategories)
+router.get('/gear-categories', getGearCategories)
 
 export const gearRoutes = router
