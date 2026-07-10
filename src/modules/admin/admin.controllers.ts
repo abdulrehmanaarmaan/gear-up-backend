@@ -16,9 +16,7 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
         success: true,
         statusCode: OK,
         message: "Users retrieved successfully.",
-        data: {
-            users
-        }
+        data: users
     })
 })
 
@@ -41,9 +39,7 @@ const updateUserStatus = catchAsync(async (req: Request, res: Response) => {
         success: true,
         statusCode: OK,
         message: "User updated successfully.",
-        data: {
-            user
-        }
+        data: user
     })
 })
 
@@ -55,9 +51,8 @@ const getAllGearListings = catchAsync(async (req: Request, res: Response) => {
         success: true,
         statusCode: OK,
         message: "Gear listings retrieved successfully.",
-        data: {
-            gears
-        }
+        data: gears
+
     })
 
 })
@@ -70,9 +65,8 @@ const getAllRentalOrders = catchAsync(async (req: Request, res: Response) => {
         success: true,
         statusCode: OK,
         message: "Rental Orders retrieved successfully.",
-        data: {
-            rentalOrders
-        }
+        data: rentalOrders
+
     })
 })
 

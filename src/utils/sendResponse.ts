@@ -1,21 +1,23 @@
 import { Response } from "express"
 
-interface TResponse<T> {
-    statusCode: number,
-    success?: boolean,
-    message?: string,
-    data?: T
+interface TResponse<X, Y> {
+    statusCode: number
+    success?: boolean
+    message?: string
+    errors?: X
+    data?: Y
 }
 
-const sendResponse = async <T>(res: Response, response: TResponse<T>) => {
+const sendResponse = async <X, Y>(res: Response, response: TResponse<X, Y>) => {
 
     try {
-        const { statusCode, success, message, data } = response
+        const { statusCode, success, message, errors, data } = response
 
         res.status(statusCode).json({
             success,
             statusCode,
             message,
+            errors,
             data
         })
     }

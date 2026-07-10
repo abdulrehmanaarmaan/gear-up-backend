@@ -12,7 +12,7 @@ export const catchAsync = (fn: RequestHandler) => {
                 success: false,
                 statusCode: httpStatus.INTERNAL_SERVER_ERROR,
                 message: error.message,
-                error: (error as Error).message
+                errors: (error as Error)
             })
         }
     }

@@ -1,21 +1,22 @@
 import jwt, { SignOptions } from "jsonwebtoken"
 
 interface JWTPayload {
-    id: string,
+    id: string
     email: string
+    role: string
 }
 
-const createToken = (payload: JWTPayload, jwtSecret: string, expiresIn: string) => {
+const createToken = (jwtPayload: JWTPayload, jwtSecret: string, expiresIn: string) => {
 
     try {
 
-        const accessToken = jwt.sign(
-            payload,
+        const jwtToken = jwt.sign(
+            jwtPayload,
             jwtSecret,
             { expiresIn } as SignOptions
         )
 
-        return accessToken
+        return jwtToken
     }
     catch (error: any) {
         return {
@@ -24,10 +25,10 @@ const createToken = (payload: JWTPayload, jwtSecret: string, expiresIn: string) 
     }
 }
 
-const verifyToken = async (accessToken: string, jwtSecret: string) => {
+const verifyToken = async (jwtToken: string, jwtSecret: string) => {
 
     try {
-        const verifiedToken = jwt.verify(accessToken, jwtSecret)
+        const verifiedToken = jwt.verify(jwtToken, jwtSecret)
         return verifiedToken
     }
     catch (error: any) {

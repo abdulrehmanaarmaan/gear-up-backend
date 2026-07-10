@@ -1,0 +1,2603 @@
+{
+  "info": {
+    "_postman_id": "d07c3308-8a62-454e-8a95-9636e8aa7385",
+    "name": "Gear Up API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54745294",
+    "_collection_link": "https://go.postman.co/collection/54745294-d07c3308-8a62-454e-8a95-9636e8aa7385?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Brett Doe\",\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Brett Doe\",\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "467"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:17:26 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"1d3-h3EceFBzCIQK+UTxmFxvN5+N6NA\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::d4qnf-1783595831687-0eb547e64a66"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"User registered successfully.\",\n    \"data\": {\n        \"createdAccount\": {\n            \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n            \"name\": \"Brett Doe\",\n            \"email\": \"brett@gmail.com\",\n            \"password\": \"$2b$10$XiYP2bc6wLFP9llmF9o0re2ktx.SfUK6RV8N/eFUC6y6VhShnidT6\",\n            \"phone\": null,\n            \"image\": null,\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"isVerified\": false,\n            \"address\": null,\n            \"city\": null,\n            \"country\": null,\n            \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n            \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": " {\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\"\r\n }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "370"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:22:51 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"172-Np4QjlgxM+4KECDHFYLkJfldB5s\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTIzZmQ2LWY0YmYtNDA3Yi1iNmNiLWE3N2RkM2ZkM2UyOCIsImVtYWlsIjoiYnJldHRAZ21haWwuY29tIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzgzNTk2MTcxLCJleHAiOjE3ODM2ODI1NzF9.jNC7LPaZqTdP40L1iaSSGNOIbzgjXkqgqNn4z3UrtYM; Max-Age=86400; Path=/; Expires=Fri, 10 Jul 2026 11:22:51 GMT; HttpOnly; SameSite=None"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTIzZmQ2LWY0YmYtNDA3Yi1iNmNiLWE3N2RkM2ZkM2UyOCIsImVtYWlsIjoiYnJldHRAZ21haWwuY29tIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzgzNTk2MTcxLCJleHAiOjE3ODQyMDA5NzF9.7ZWDLZo48AIVEKg-FO-SYpVTF6PjKLKta4EYwYVMFUA; Max-Age=604800; Path=/; Expires=Thu, 16 Jul 2026 11:22:51 GMT; HttpOnly; SameSite=None"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::6zr7m-1783596170586-1d5c39b65624"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"User logged successfully.\",\n    \"data\": {\n        \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n        \"name\": \"Brett Doe\",\n        \"email\": \"brett@gmail.com\",\n        \"phone\": null,\n        \"image\": null,\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"isVerified\": false,\n        \"address\": null,\n        \"city\": null,\n        \"country\": null,\n        \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n        \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Me",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/auth/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/auth/me",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Age",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "390"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:26:59 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"186-EZx+HdPwLqu9BgY3C5V0VN/eF0M\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::b8llp-1783596419127-f689290ab339"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Account retrieved successfully.\",\n    \"data\": {\n        \"myAccount\": {\n            \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n            \"name\": \"Brett Doe\",\n            \"email\": \"brett@gmail.com\",\n            \"phone\": null,\n            \"image\": null,\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"isVerified\": false,\n            \"address\": null,\n            \"city\": null,\n            \"country\": null,\n            \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n            \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n        }\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gear",
+      "item": [
+        {
+          "name": "Gears",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/gears",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "gears"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Gears",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/gears",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "gears"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Age",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "85"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:29:50 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"55-RXKJYRq3+/fgtMxRLpEFtgy5NbI\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::7v7r7-1783596588354-1a3e2fa63b02"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gears retrieved successfully.\",\n    \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Gear Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/gears/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "gears",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Gear Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/gears/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "gears",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Age",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "240"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:31:54 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"f0-xF/aOuKn7rXu1Xhvl85ls+tpD5c\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::7njfq-1783596694390-8b91f0d21140"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.gearItem.findUniqueOrThrow()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for a query.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Gear Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Gear Categories",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/categories",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Age",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "95"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:33:01 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"5f-ACQuyeXvfP4TAST6SxrWQDMT/ik\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::mcghf-1783596780544-3802ba887d71"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gear categories retrieved successfully.\",\n    \"data\": []\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rental Order",
+      "item": [
+        {
+          "name": "Rental Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-08-01\",\r\n  \"rentalEndDate\": \"2026-08-05\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/rentals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "rentals"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Rental Order",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-08-01\",\r\n  \"rentalEndDate\": \"2026-08-05\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/rentals",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rentals"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "117"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 09 Jul 2026 11:46:39 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"75-exOCm9uQu1e3Hu/qEW4kDo5jkVw\""
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::plcml-1783597568254-9d7a4ff67167"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Cannot destructure property 'providerId' of 'addedGear' as it is null.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Rental Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/rentals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "rentals"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Rental Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/rentals",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rentals"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:03:06 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1c0-dfP22GHhMJl5N81DxFz0ujlezlE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::k6cg9-1783598585994-22ae199da043"
+                },
+                {
+                  "key": "content-length",
+                  "value": "448"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.findMany()` invocation:\\n\\n{\\n  where: {\\n    customerId: \\\"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\\\"\\n  },\\n  include: {\\n    customer: true,\\n    provider: true,\\n    gear: true,\\n    payments: true,\\n    ~~~~~~~~\\n    reviews: true,\\n?   payment?: true\\n  }\\n}\\n\\nUnknown field `payments` for include statement on model `RentalOrder`. Available options are marked with ?.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Rental Order Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/rentals/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "rentals",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Rental Order Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/rentals/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rentals",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:07:20 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1db-iQ6XPvjbMJ6E0kHPd12IS5E/6nk\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::hxzg8-1783598836288-40dd3be0a7d8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "475"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.findUniqueOrThrow()` invocation:\\n\\n{\\n  where: {\\n    id: \\\":id\\\",\\n    customerId: \\\"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\\\"\\n  },\\n  include: {\\n    customer: true,\\n    provider: true,\\n    gear: true,\\n    payments: true,\\n    ~~~~~~~~\\n    reviews: true,\\n?   payment?: true\\n  }\\n}\\n\\nUnknown field `payments` for include statement on model `RentalOrder`. Available options are marked with ?.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Create Checkout Session",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/payments/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "create"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Checkout Session",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments/create",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:16:47 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"88-1H2DYbyZzv//76ZjUw5x+DYM0yE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::wqcbq-1783599370080-5c94aa5382c4"
+                },
+                {
+                  "key": "content-length",
+                  "value": "136"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Cannot destructure property 'rentalOrderId' of '(intermediate value)' as it is undefined.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Verify Payment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://gear-up-psi.vercel.app/api/payments/confirm",
+              "protocol": "https",
+              "host": [
+                "gear-up-psi",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "confirm"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "My Payments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/payments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Payments",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:18:59 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"58-flVHvZl8Ta9kTB0yJlD2+2TaW2I\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::kth27-1783599517280-8c0d373c2dcb"
+                },
+                {
+                  "key": "content-length",
+                  "value": "88"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payments retrieved successfully.\",\n    \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Payment Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/payments/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Payment Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:29:21 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"41-3aPkIZy6JT7DWAP0Q3snxG8wabA\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::dvl4j-1783600160002-2ee24e2edbe2"
+                },
+                {
+                  "key": "content-length",
+                  "value": "65"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Payment not found.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Review",
+      "item": [
+        {
+          "name": "Review",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"rentalOrderId\": \"cmctwhg2m0002u8q84x9s7kqr\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reviews",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Review",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"rentalOrderId\": \"cmctwhg2m0002u8q84x9s7kqr\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/reviews",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reviews"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:12:34 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"ab-UXUQEvOJ62jfCoMhADIu5CJDJTQ\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::mcghf-1783599150298-cd224bfc155d"
+                },
+                {
+                  "key": "content-length",
+                  "value": "171"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.review.create()` invocation:\\n\\n\\nForeign key constraint violated on the constraint: `reviews_gearId_fkey`\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Provider",
+      "item": [
+        {
+          "name": "Gear",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"categoryId\": \"cmctq5r0g0001u8q8d7k9m2ab\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/provider/gear",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "provider",
+                "gear"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Gear",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"categoryId\": \"cmctq5r0g0001u8q8d7k9m2ab\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/provider/gear",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "gear"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:46:25 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::62rq4-1783601181315-dd0d119c9338"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Gear",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/provider/gear/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "provider",
+                "gear",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Gear",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/provider/gear/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "gear",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:48:20 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::2hjsl-1783601290727-0ba3bfcc6e7c"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Gear",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/provider/gear/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "provider",
+                "gear",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Gear",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/provider/gear/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "gear",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:52:05 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::2tmk4-1783601472459-8b925c01767b"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Rental Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/provider/orders",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "provider",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "My Rental Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/provider/orders",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:54:47 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::zndf9-1783601686664-459b4c910cd2"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Rental Order Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"RETURNED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/provider/orders/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "provider",
+                "orders",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Rental Order Status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"RETURNED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/provider/orders/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "orders",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 13:04:44 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::v7b6r-1783602281707-dc1f82e34551"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 12:57:47 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::cvchr-1783601861730-c474680d7aba"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "User Status",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"SUSPENDED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/users/:id",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "User Status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"SUSPENDED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users/:id",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 13:02:16 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::d6djq-1783602077054-cb04dbe635a9"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Gears",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/gears",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "gears"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Gears",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/gears",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "gears"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 13:02:43 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::6f78s-1783602163630-a5f9a234c190"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Rental Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/rentals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "rentals"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Rental Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/rentals",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "rentals"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 09 Jul 2026 13:03:16 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::htqdf-1783602196398-c8d34be56c1c"
+                },
+                {
+                  "key": "content-length",
+                  "value": "111"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

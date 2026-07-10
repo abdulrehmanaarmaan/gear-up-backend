@@ -23,7 +23,7 @@ const auth = () => {
 
         const { authorization } = req.headers
 
-        const accessToken = req.cookies.accessToken || (authorization?.startsWith("Bearer") && authorization.split(" ")[1]) || authorization
+        const accessToken = req.cookies.accessToken || (authorization?.startsWith("Bearer") ? authorization.split(" ")[1] : authorization)
 
         if (!accessToken) {
             throw new Error("Login to access authorized resources.")
