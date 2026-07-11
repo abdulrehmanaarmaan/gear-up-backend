@@ -5,7 +5,7 @@ const getUsersFromDB = async () => {
 
     const result = await prisma.user.findMany({
         include: {
-            payment: true,
+            payments: true,
             reviews: true,
             gearItems: true,
             customerOrders: true,

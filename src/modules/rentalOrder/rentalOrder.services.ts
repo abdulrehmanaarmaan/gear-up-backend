@@ -80,7 +80,7 @@ const getOrdersFromDB = async (customerId: string) => {
 
 const getSingleOrder = async (id: string, customerId: string) => {
 
-    const result = await prisma.rentalOrder.findUniqueOrThrow({
+    const result = await prisma.rentalOrder.findUnique({
 
         where: {
             id,
@@ -88,8 +88,24 @@ const getSingleOrder = async (id: string, customerId: string) => {
         },
 
         include: {
-            customer: true,
-            provider: true,
+            customer: {
+                select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                    role: true,
+                    image: true
+                }
+            },
+            provider: {
+                select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                    role: true,
+                    image: true
+                }
+            },
             gear: true,
             payment: true,
             reviews: true
