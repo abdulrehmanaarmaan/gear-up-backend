@@ -83,7 +83,7 @@ const createCheckoutSession = async (userId: string, rentalOrderId: string) => {
             mode: "payment",
             customer: stripeCustomerId,
             payment_method_types: ["card"],
-            success_url: `${app_url}/premium?success=true`,
+            success_url: `${app_url}/payment?success=true`,
             cancel_url: `${app_url}/payment?success=false`,
             metadata: {
                 customerId,
@@ -100,28 +100,35 @@ const createCheckoutSession = async (userId: string, rentalOrderId: string) => {
 
 const handleWebhook = async (payload: Buffer, signature: string) => {
 
-    const endpointSecret = stripe_webhook_secret
+    try {
 
-    const event = stripe.webhooks.constructEvent(
-        payload,
-        signature,
-        endpointSecret
-    )
+        const endpointSecret = stripe_webhook_secret
 
-    // Handle the event
-    switch (event.type) {
-        case "checkout.session.completed": {
-            const session: Stripe.Checkout.Session = event.data.object
-            await handleCheckoutCompleted(session)
+        const event = stripe.webhooks.constructEvent(
+            payload,
+            signature,
+            endpointSecret
+        )
 
-            // Then define and call a method to handle the successful payment intent.
-            // handlePaymentIntentSucceeded(paymentIntent);
-            break
+        // Handle the event
+        switch (event.type) {
+            case "checkout.session.completed": {
+                const session: Stripe.Checkout.Session = event.data.object
+                await handleCheckoutCompleted(session)
+
+                // Then define and call a method to handle the successful payment intent.
+                // handlePaymentIntentSucceeded(paymentIntent);
+                break
+            }
+
+            default:
+                // Unexpected event type
+                console.log(`Unhandled event type ${event.type}.`);
         }
-
-        default:
-            // Unexpected event type
-            console.log(`Unhandled event type ${event.type}.`);
+    }
+    catch (error: any) {
+        console.error("Stripe webhook failed:", error);
+        throw new Error(error.message);
     }
 }
 

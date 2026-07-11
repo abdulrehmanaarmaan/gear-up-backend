@@ -46,8 +46,7 @@ const removeGear = catchAsync(async (req: Request, res: Response) => {
     sendResponse(res, {
         success: true,
         statusCode: OK,
-        message: "Gear removed successfully.",
-        data: removedGear
+        message: "Gear removed successfully."
     })
 
 })

@@ -71,7 +71,7 @@ const getRentalOrders = async () => {
             customer: true,
             provider: true,
             gear: true,
-            payments: true,
+            payment: true,
             reviews: true,
         }
     })
