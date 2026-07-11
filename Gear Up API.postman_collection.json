@@ -23,7 +23,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Brett Doe\",\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
+              "raw": "{\r\n    \"name\": \"Finn Doe\",\r\n    \"email\": \"finn@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -40,7 +40,8 @@
                 "auth",
                 "register"
               ]
-            }
+            },
+            "description": "Registers a new customer, provider or admin account.\n\nPublic endpoint.\n\nReturns the authenticated user's information after successful registration.\n\nAllowed role values:  \n• CUSTOMER  \n• PROVIDER  \n• ADMIN"
           },
           "response": [
             {
@@ -56,7 +57,103 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"name\": \"Brett Doe\",\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
+                  "raw": "{\r\n    \"name\": \"Abel Doe\",\r\n    \"email\": \"abel@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 15:08:07 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"47-o8ozU8gGlakhyWq1JPviBO3+gxM\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::ds2wm-1783696087107-b15eed3f1caf"
+                },
+                {
+                  "key": "content-length",
+                  "value": "71"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Account already created.\"\n}"
+            },
+            {
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Finn Doe\",\r\n    \"email\": \"finn@gmail.com\",\r\n    \"password\": \"Password123\",\r\n    \"role\": \"CUSTOMER\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -77,63 +174,73 @@
               },
               "status": "Created",
               "code": 201,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "",
               "header": [
                 {
-                  "key": "Access-Control-Allow-Credentials",
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "access-control-allow-credentials",
                   "value": "true"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
+                  "key": "access-control-allow-origin",
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "Cache-Control",
+                  "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
-                  "key": "Content-Length",
-                  "value": "467"
-                },
-                {
-                  "key": "Content-Type",
+                  "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
-                  "key": "Date",
-                  "value": "Thu, 09 Jul 2026 11:17:26 GMT"
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 15:10:57 GMT"
                 },
                 {
-                  "key": "Etag",
-                  "value": "W/\"1d3-h3EceFBzCIQK+UTxmFxvN5+N6NA\""
+                  "key": "etag",
+                  "value": "W/\"1be-lW7BwioddmQvfGHJ5u3PVwot9r0\""
                 },
                 {
-                  "key": "Server",
+                  "key": "server",
                   "value": "Vercel"
                 },
                 {
-                  "key": "Strict-Transport-Security",
+                  "key": "strict-transport-security",
                   "value": "max-age=63072000; includeSubDomains; preload"
                 },
                 {
-                  "key": "Vary",
+                  "key": "vary",
                   "value": "Origin"
                 },
                 {
-                  "key": "X-Powered-By",
+                  "key": "x-powered-by",
                   "value": "Express"
                 },
                 {
-                  "key": "X-Vercel-Cache",
+                  "key": "x-vercel-cache",
                   "value": "MISS"
                 },
                 {
-                  "key": "X-Vercel-Id",
-                  "value": "bom1::iad1::d4qnf-1783595831687-0eb547e64a66"
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::gxzdf-1783696256993-495b979d45ff"
+                },
+                {
+                  "key": "content-length",
+                  "value": "446"
                 }
               ],
-              "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"User registered successfully.\",\n    \"data\": {\n        \"createdAccount\": {\n            \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n            \"name\": \"Brett Doe\",\n            \"email\": \"brett@gmail.com\",\n            \"password\": \"$2b$10$XiYP2bc6wLFP9llmF9o0re2ktx.SfUK6RV8N/eFUC6y6VhShnidT6\",\n            \"phone\": null,\n            \"image\": null,\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"isVerified\": false,\n            \"address\": null,\n            \"city\": null,\n            \"country\": null,\n            \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n            \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n        }\n    }\n}"
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"User registered successfully.\",\n    \"data\": {\n        \"id\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"name\": \"Finn Doe\",\n        \"email\": \"finn@gmail.com\",\n        \"phone\": null,\n        \"image\": null,\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"isVerified\": false,\n        \"address\": null,\n        \"city\": null,\n        \"country\": null,\n        \"createdAt\": \"2026-07-10T15:10:57.353Z\",\n        \"updatedAt\": \"2026-07-10T15:10:57.353Z\"\n    }\n}"
             }
           ]
         },
@@ -150,7 +257,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": " {\r\n    \"email\": \"brett@gmail.com\",\r\n    \"password\": \"Password123\"\r\n }",
+              "raw": " {\r\n    \"email\": \"finn@gmail.com\",\r\n    \"password\": \"Password123\"\r\n }",
               "options": {
                 "raw": {
                   "language": "json"
@@ -167,7 +274,8 @@
                 "auth",
                 "login"
               ]
-            }
+            },
+            "description": "Authenticates a user and returns JWT authentication cookies.\n\nPublic endpoint.\n\nReturns the authenticated user's information after successful login."
           },
           "response": [
             {
@@ -269,6 +377,198 @@
               ],
               "cookie": [],
               "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"User logged successfully.\",\n    \"data\": {\n        \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n        \"name\": \"Brett Doe\",\n        \"email\": \"brett@gmail.com\",\n        \"phone\": null,\n        \"image\": null,\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"isVerified\": false,\n        \"address\": null,\n        \"city\": null,\n        \"country\": null,\n        \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n        \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n    }\n}"
+            },
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": " {\r\n    \"email\": \"william@gmail.com\",\r\n    \"password\": \"Password123\"\r\n }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 18:38:20 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"62-FAagauNXR05nY3tYeNMQn807FUc\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::zs6xq-1783708688257-0a53fcba41ad"
+                },
+                {
+                  "key": "content-length",
+                  "value": "98"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"User not registered. Create an account.\",\n    \"errors\": {}\n}"
+            },
+            {
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": " {\r\n    \"email\": \"finn@gmail.com\",\r\n    \"password\": \"Password12\"\r\n }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 18:42:03 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"5c-rGIgGaYRo9Nxm5gggHLaSoQIM/w\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::76k69-1783708922728-3f1ae9fb647b"
+                },
+                {
+                  "key": "content-length",
+                  "value": "92"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"The provided password is invalid.\",\n    \"errors\": {}\n}"
             }
           ]
         },
@@ -294,14 +594,22 @@
                 "auth",
                 "me"
               ]
-            }
+            },
+            "description": "Retrieves the authenticated user's profile information.\n\nAuthentication Required.\n\nRoles:  \n• CUSTOMER  \n• PROVIDER  \n• ADMIN"
           },
           "response": [
             {
               "name": "Me",
               "originalRequest": {
                 "method": "GET",
-                "header": [],
+                "header": [
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
                 "url": {
                   "raw": "{{base_url}}/api/auth/me",
                   "host": [
@@ -319,64 +627,68 @@
               "_postman_previewlanguage": null,
               "header": [
                 {
-                  "key": "Access-Control-Allow-Credentials",
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
                   "value": "true"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
+                  "key": "access-control-allow-origin",
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "Age",
+                  "key": "age",
                   "value": "0"
                 },
                 {
-                  "key": "Cache-Control",
+                  "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
-                  "key": "Content-Length",
-                  "value": "390"
-                },
-                {
-                  "key": "Content-Type",
+                  "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
-                  "key": "Date",
-                  "value": "Thu, 09 Jul 2026 11:26:59 GMT"
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 18:44:11 GMT"
                 },
                 {
-                  "key": "Etag",
-                  "value": "W/\"186-EZx+HdPwLqu9BgY3C5V0VN/eF0M\""
+                  "key": "etag",
+                  "value": "W/\"174-klWQNg/K4sFh7lFtdSrFU+Pt0M0\""
                 },
                 {
-                  "key": "Server",
+                  "key": "server",
                   "value": "Vercel"
                 },
                 {
-                  "key": "Strict-Transport-Security",
+                  "key": "strict-transport-security",
                   "value": "max-age=63072000; includeSubDomains; preload"
                 },
                 {
-                  "key": "Vary",
+                  "key": "vary",
                   "value": "Origin"
                 },
                 {
-                  "key": "X-Powered-By",
+                  "key": "x-powered-by",
                   "value": "Express"
                 },
                 {
-                  "key": "X-Vercel-Cache",
+                  "key": "x-vercel-cache",
                   "value": "MISS"
                 },
                 {
-                  "key": "X-Vercel-Id",
-                  "value": "bom1::iad1::b8llp-1783596419127-f689290ab339"
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::vhshf-1783709050775-19e8f95139aa"
+                },
+                {
+                  "key": "content-length",
+                  "value": "372"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Account retrieved successfully.\",\n    \"data\": {\n        \"myAccount\": {\n            \"id\": \"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\",\n            \"name\": \"Brett Doe\",\n            \"email\": \"brett@gmail.com\",\n            \"phone\": null,\n            \"image\": null,\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"isVerified\": false,\n            \"address\": null,\n            \"city\": null,\n            \"country\": null,\n            \"createdAt\": \"2026-07-09T11:17:26.578Z\",\n            \"updatedAt\": \"2026-07-09T11:17:26.578Z\"\n        }\n    }\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Account retrieved successfully.\",\n    \"data\": {\n        \"id\": \"65f0dcf1-f471-42dd-a551-515c6914e064\",\n        \"name\": \"Tim Doe\",\n        \"email\": \"tim@gmail.com\",\n        \"phone\": null,\n        \"image\": null,\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"isVerified\": false,\n        \"address\": null,\n        \"city\": null,\n        \"country\": null,\n        \"createdAt\": \"2026-07-10T18:35:06.794Z\",\n        \"updatedAt\": \"2026-07-10T18:35:06.794Z\"\n    }\n}"
             }
           ]
         }
@@ -399,7 +711,8 @@
                 "api",
                 "gears"
               ]
-            }
+            },
+            "description": "Retrieves all approved gear listings.\n\nSupports filtering by category, price, and brand.\n\nPublic endpoint."
           },
           "response": [
             {
@@ -423,64 +736,68 @@
               "_postman_previewlanguage": null,
               "header": [
                 {
-                  "key": "Access-Control-Allow-Credentials",
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
                   "value": "true"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
+                  "key": "access-control-allow-origin",
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "Age",
+                  "key": "age",
                   "value": "0"
                 },
                 {
-                  "key": "Cache-Control",
+                  "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
-                  "key": "Content-Length",
-                  "value": "85"
+                  "key": "content-encoding",
+                  "value": "br"
                 },
                 {
-                  "key": "Content-Type",
+                  "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
-                  "key": "Date",
-                  "value": "Thu, 09 Jul 2026 11:29:50 GMT"
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 15:57:39 GMT"
                 },
                 {
-                  "key": "Etag",
-                  "value": "W/\"55-RXKJYRq3+/fgtMxRLpEFtgy5NbI\""
+                  "key": "etag",
+                  "value": "W/\"85e-di/zyCwDhZ6mF/Yee6DPjiLjUKk\""
                 },
                 {
-                  "key": "Server",
+                  "key": "server",
                   "value": "Vercel"
                 },
                 {
-                  "key": "Strict-Transport-Security",
+                  "key": "strict-transport-security",
                   "value": "max-age=63072000; includeSubDomains; preload"
                 },
                 {
-                  "key": "Vary",
+                  "key": "vary",
                   "value": "Origin"
                 },
                 {
-                  "key": "X-Powered-By",
+                  "key": "x-powered-by",
                   "value": "Express"
                 },
                 {
-                  "key": "X-Vercel-Cache",
+                  "key": "x-vercel-cache",
                   "value": "MISS"
                 },
                 {
-                  "key": "X-Vercel-Id",
-                  "value": "bom1::iad1::7v7r7-1783596588354-1a3e2fa63b02"
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::vx5jm-1783785457998-a0ab52993999"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gears retrieved successfully.\",\n    \"data\": []\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gears retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n            \"title\": \"Trek Marlin 7 Mountain Bike\",\n            \"slug\": \"trek-marlin-7-mountain-bike\",\n            \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n            \"brand\": \"Trek\",\n            \"model\": \"Marlin 7 Gen 3\",\n            \"condition\": \"EXCELLENT\",\n            \"pricePerDay\": \"700\",\n            \"quantity\": 5,\n            \"availableQuantity\": 5,\n            \"images\": [\n                \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n            ],\n            \"specifications\": {\n                \"frame\": \"Aluminum\",\n                \"gears\": \"18-Speed\",\n                \"brakes\": \"Hydraulic Disc\",\n                \"weight\": \"13.8 kg\",\n                \"material\": \"Aluminum Alloy\",\n                \"wheelSize\": \"29 inches\",\n                \"suspension\": \"Front Suspension\"\n            },\n            \"location\": \"Chittagong, Bangladesh\",\n            \"isAvailable\": true,\n            \"status\": \"APPROVED\",\n            \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n            \"updatedAt\": \"2026-07-11T15:30:46.752Z\",\n            \"provider\": {\n                \"id\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"name\": \"Seth Doe\",\n                \"email\": \"seth@gmail.com\",\n                \"role\": \"PROVIDER\",\n                \"image\": null\n            },\n            \"category\": {\n                \"id\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n                \"name\": \"Fishing\",\n                \"slug\": \"fishing\",\n                \"description\": \"Fishing rods and tackle.\",\n                \"image\": null,\n                \"createdAt\": \"2026-07-11T05:54:31.925Z\",\n                \"updatedAt\": \"2026-07-11T05:54:31.925Z\"\n            },\n            \"reviews\": [],\n            \"rentalOrders\": [\n                {\n                    \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n                    \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n                    \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                    \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n                    \"quantity\": 1,\n                    \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n                    \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n                    \"totalDays\": 1,\n                    \"pricePerDay\": \"700\",\n                    \"subtotal\": \"700\",\n                    \"serviceFee\": \"70\",\n                    \"totalAmount\": \"770\",\n                    \"status\": \"PLACED\",\n                    \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n                    \"notes\": \"Will pick up in the afternoon.\",\n                    \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n                    \"updatedAt\": \"2026-07-11T14:21:51.392Z\"\n                }\n            ]\n        }\n    ]\n}"
             }
           ]
         },
@@ -505,7 +822,8 @@
                   "value": ""
                 }
               ]
-            }
+            },
+            "description": "Retrieves detailed information for a specific gear item.\n\nPublic endpoint."
           },
           "response": [
             {
@@ -536,64 +854,68 @@
               "_postman_previewlanguage": null,
               "header": [
                 {
-                  "key": "Access-Control-Allow-Credentials",
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
                   "value": "true"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
+                  "key": "access-control-allow-origin",
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "Age",
+                  "key": "age",
                   "value": "0"
                 },
                 {
-                  "key": "Cache-Control",
+                  "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
-                  "key": "Content-Length",
-                  "value": "240"
-                },
-                {
-                  "key": "Content-Type",
+                  "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
-                  "key": "Date",
-                  "value": "Thu, 09 Jul 2026 11:31:54 GMT"
+                  "key": "date",
+                  "value": "Fri, 10 Jul 2026 16:11:18 GMT"
                 },
                 {
-                  "key": "Etag",
-                  "value": "W/\"f0-xF/aOuKn7rXu1Xhvl85ls+tpD5c\""
+                  "key": "etag",
+                  "value": "W/\"17f-7UgTfc/fhi6RgF1l2x5lzFTdZRM\""
                 },
                 {
-                  "key": "Server",
+                  "key": "server",
                   "value": "Vercel"
                 },
                 {
-                  "key": "Strict-Transport-Security",
+                  "key": "strict-transport-security",
                   "value": "max-age=63072000; includeSubDomains; preload"
                 },
                 {
-                  "key": "Vary",
+                  "key": "vary",
                   "value": "Origin"
                 },
                 {
-                  "key": "X-Powered-By",
+                  "key": "x-powered-by",
                   "value": "Express"
                 },
                 {
-                  "key": "X-Vercel-Cache",
+                  "key": "x-vercel-cache",
                   "value": "MISS"
                 },
                 {
-                  "key": "X-Vercel-Id",
-                  "value": "bom1::iad1::7njfq-1783596694390-8b91f0d21140"
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::5wsbh-1783699859834-fecbf81802ab"
+                },
+                {
+                  "key": "content-length",
+                  "value": "383"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.gearItem.findUniqueOrThrow()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for a query.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.gearItem.findUniqueOrThrow()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for a query.\",\n    \"errors\": {\n        \"code\": \"P2025\",\n        \"meta\": {\n            \"modelName\": \"GearItem\",\n            \"operation\": \"a query\"\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
             }
           ]
         },
@@ -611,7 +933,8 @@
                 "api",
                 "categories"
               ]
-            }
+            },
+            "description": "Retrieves all available gear categories.\n\nPublic endpoint."
           },
           "response": [
             {
@@ -714,7 +1037,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-08-01\",\r\n  \"rentalEndDate\": \"2026-08-05\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
+              "raw": "{\r\n  \"gearId\": \"4\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -730,7 +1053,8 @@
                 "api",
                 "rentals"
               ]
-            }
+            },
+            "description": "Creates a new rental order for a gear item.\n\nAuthentication Required.\n\nRole:  \n• Customer\n\nStatus:  \n• PLACED  \n• CONFIRMED  \n• PAID  \n• PICKED_UP  \n• RETURNED  \n• CANCELLED"
           },
           "response": [
             {
@@ -746,7 +1070,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-08-01\",\r\n  \"rentalEndDate\": \"2026-08-05\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
+                  "raw": "{\r\n  \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -764,90 +1088,90 @@
                   ]
                 }
               },
-              "status": "Internal Server Error",
-              "code": 500,
+              "status": "Created",
+              "code": 201,
               "_postman_previewlanguage": null,
               "header": [
                 {
-                  "key": "Access-Control-Allow-Credentials",
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "access-control-allow-credentials",
                   "value": "true"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
+                  "key": "access-control-allow-origin",
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "Cache-Control",
+                  "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
-                  "key": "Content-Length",
-                  "value": "117"
-                },
-                {
-                  "key": "Content-Type",
+                  "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
-                  "key": "Date",
-                  "value": "Thu, 09 Jul 2026 11:46:39 GMT"
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 08:06:32 GMT"
                 },
                 {
-                  "key": "Etag",
-                  "value": "W/\"75-exOCm9uQu1e3Hu/qEW4kDo5jkVw\""
+                  "key": "etag",
+                  "value": "W/\"295-KG2E+7A3/7tFbob6yx4V7yJeOq8\""
                 },
                 {
-                  "key": "Server",
+                  "key": "server",
                   "value": "Vercel"
                 },
                 {
-                  "key": "Strict-Transport-Security",
+                  "key": "strict-transport-security",
                   "value": "max-age=63072000; includeSubDomains; preload"
                 },
                 {
-                  "key": "Vary",
+                  "key": "vary",
                   "value": "Origin"
                 },
                 {
-                  "key": "X-Powered-By",
+                  "key": "x-powered-by",
                   "value": "Express"
                 },
                 {
-                  "key": "X-Vercel-Cache",
+                  "key": "x-vercel-cache",
                   "value": "MISS"
                 },
                 {
-                  "key": "X-Vercel-Id",
-                  "value": "bom1::iad1::plcml-1783597568254-9d7a4ff67167"
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::tx2qw-1783757182448-81f531d0cf34"
+                },
+                {
+                  "key": "content-length",
+                  "value": "661"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Cannot destructure property 'providerId' of 'addedGear' as it is null.\"\n}"
-            }
-          ]
-        },
-        {
-          "name": "My Rental Orders",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "{{base_url}}/api/rentals",
-              "host": [
-                "{{base_url}}"
-              ],
-              "path": [
-                "api",
-                "rentals"
-              ]
-            }
-          },
-          "response": [
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"Order created successfully.\",\n    \"data\": {\n        \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n        \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n        \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n        \"quantity\": 1,\n        \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n        \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n        \"totalDays\": 1,\n        \"pricePerDay\": \"700\",\n        \"subtotal\": \"700\",\n        \"serviceFee\": \"70\",\n        \"totalAmount\": \"770\",\n        \"status\": \"PLACED\",\n        \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n        \"notes\": \"Will pick up in the afternoon.\",\n        \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n        \"updatedAt\": \"2026-07-11T08:06:32.050Z\"\n    }\n}"
+            },
             {
-              "name": "My Rental Orders",
+              "name": "Rental Order",
               "originalRequest": {
-                "method": "GET",
-                "header": [],
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"4\",\r\n  \"quantity\": 1,\r\n  \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\r\n  \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\r\n  \"notes\": \"Will pick up in the afternoon.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
                 "url": {
                   "raw": "{{base_url}}/api/rentals",
                   "host": [
@@ -876,10 +1200,6 @@
                   "value": "https://gear-up-psi.vercel.app"
                 },
                 {
-                  "key": "age",
-                  "value": "0"
-                },
-                {
                   "key": "cache-control",
                   "value": "public, max-age=0, must-revalidate"
                 },
@@ -889,11 +1209,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:03:06 GMT"
+                  "value": "Sat, 11 Jul 2026 08:10:19 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"1c0-dfP22GHhMJl5N81DxFz0ujlezlE\""
+                  "value": "W/\"4a-UnaHKQ7e/1VTA4FJIsmL9lDi5mU\""
                 },
                 {
                   "key": "server",
@@ -917,15 +1237,125 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::k6cg9-1783598585994-22ae199da043"
+                  "value": "bom1::iad1::msbl8-1783757418395-f05796eed94f"
                 },
                 {
                   "key": "content-length",
-                  "value": "448"
+                  "value": "74"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.findMany()` invocation:\\n\\n{\\n  where: {\\n    customerId: \\\"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\\\"\\n  },\\n  include: {\\n    customer: true,\\n    provider: true,\\n    gear: true,\\n    payments: true,\\n    ~~~~~~~~\\n    reviews: true,\\n?   payment?: true\\n  }\\n}\\n\\nUnknown field `payments` for include statement on model `RentalOrder`. Available options are marked with ?.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Gear not found.\",\n    \"errors\": {}\n}"
+            }
+          ]
+        },
+        {
+          "name": "My Rental Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/rentals",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "rentals"
+              ]
+            },
+            "description": "Retrieves all rental orders belonging to the authenticated customer.\n\nAuthentication Required.\n\nRole:  \n• Customer"
+          },
+          "response": [
+            {
+              "name": "My Rental Orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/rentals",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rentals"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 10:20:38 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"9f7-+96A+2pNOo8cIsaY0+xrgGK81Mo\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::54622-1783765237708-134079d14c95"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Rental orders retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n            \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"quantity\": 1,\n            \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n            \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n            \"totalDays\": 1,\n            \"pricePerDay\": \"700\",\n            \"subtotal\": \"700\",\n            \"serviceFee\": \"70\",\n            \"totalAmount\": \"770\",\n            \"status\": \"PLACED\",\n            \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n            \"notes\": \"Will pick up in the afternoon.\",\n            \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n            \"updatedAt\": \"2026-07-11T08:06:32.050Z\",\n            \"customer\": {\n                \"id\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n                \"name\": \"Finn Doe\",\n                \"email\": \"finn@gmail.com\",\n                \"image\": null,\n                \"role\": \"CUSTOMER\"\n            },\n            \"provider\": {\n                \"id\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"name\": \"Seth Doe\",\n                \"email\": \"seth@gmail.com\",\n                \"image\": null,\n                \"role\": \"PROVIDER\"\n            },\n            \"gear\": {\n                \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n                \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n                \"title\": \"Trek Marlin 7 Mountain Bike\",\n                \"slug\": \"trek-marlin-7-mountain-bike\",\n                \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n                \"brand\": \"Trek\",\n                \"model\": \"Marlin 7 Gen 3\",\n                \"condition\": \"EXCELLENT\",\n                \"pricePerDay\": \"700\",\n                \"quantity\": 5,\n                \"availableQuantity\": 5,\n                \"images\": [\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n                ],\n                \"specifications\": {\n                    \"frame\": \"Aluminum\",\n                    \"gears\": \"18-Speed\",\n                    \"brakes\": \"Hydraulic Disc\",\n                    \"weight\": \"13.8 kg\",\n                    \"material\": \"Aluminum Alloy\",\n                    \"wheelSize\": \"29 inches\",\n                    \"suspension\": \"Front Suspension\"\n                },\n                \"location\": \"Chittagong, Bangladesh\",\n                \"isAvailable\": true,\n                \"status\": \"APPROVED\",\n                \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n                \"updatedAt\": \"2026-07-11T07:58:56.051Z\"\n            },\n            \"payment\": null,\n            \"reviews\": []\n        }\n    ]\n}"
             }
           ]
         },
@@ -935,22 +1365,17 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/rentals/:id",
+              "raw": "{{base_url}}/api/rentals/8c2a8b58-4cfa-4411-a983-62fd5a7ddf40",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "api",
                 "rentals",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "8c2a8b58-4cfa-4411-a983-62fd5a7ddf40"
               ]
-            }
+            },
+            "description": "Retrieves details of a specific rental order.\n\nAuthentication Required.\n\nRole:  \n• Customer"
           },
           "response": [
             {
@@ -1006,11 +1431,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:07:20 GMT"
+                  "value": "Fri, 10 Jul 2026 19:24:49 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"1db-iQ6XPvjbMJ6E0kHPd12IS5E/6nk\""
+                  "value": "W/\"185-NyDUv8e3IQU3G15fGGoFuxbs2tw\""
                 },
                 {
                   "key": "server",
@@ -1034,15 +1459,106 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::hxzg8-1783598836288-40dd3be0a7d8"
+                  "value": "bom1::iad1::dg9ng-1783711458841-ea0f9d065b31"
                 },
                 {
                   "key": "content-length",
-                  "value": "475"
+                  "value": "389"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.findUniqueOrThrow()` invocation:\\n\\n{\\n  where: {\\n    id: \\\":id\\\",\\n    customerId: \\\"63a23fd6-f4bf-407b-b6cb-a77dd3fd3e28\\\"\\n  },\\n  include: {\\n    customer: true,\\n    provider: true,\\n    gear: true,\\n    payments: true,\\n    ~~~~~~~~\\n    reviews: true,\\n?   payment?: true\\n  }\\n}\\n\\nUnknown field `payments` for include statement on model `RentalOrder`. Available options are marked with ?.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.findUniqueOrThrow()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for a query.\",\n    \"errors\": {\n        \"code\": \"P2025\",\n        \"meta\": {\n            \"modelName\": \"RentalOrder\",\n            \"operation\": \"a query\"\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
+            },
+            {
+              "name": "Rental Order Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/rentals/8c2a8b58-4cfa-4411-a983-62fd5a7ddf40",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "rentals",
+                    "8c2a8b58-4cfa-4411-a983-62fd5a7ddf40"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 10:30:36 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"9f5-76OHSOVvvLawShgovtS9ZFJKb0w\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::wm7x6-1783765836063-02164ce5f745"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Order details retrieved successfully.\",\n    \"data\": {\n        \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n        \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n        \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n        \"quantity\": 1,\n        \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n        \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n        \"totalDays\": 1,\n        \"pricePerDay\": \"700\",\n        \"subtotal\": \"700\",\n        \"serviceFee\": \"70\",\n        \"totalAmount\": \"770\",\n        \"status\": \"PLACED\",\n        \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n        \"notes\": \"Will pick up in the afternoon.\",\n        \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n        \"updatedAt\": \"2026-07-11T08:06:32.050Z\",\n        \"customer\": {\n            \"id\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n            \"name\": \"Finn Doe\",\n            \"email\": \"finn@gmail.com\",\n            \"image\": null,\n            \"role\": \"CUSTOMER\"\n        },\n        \"provider\": {\n            \"id\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"name\": \"Seth Doe\",\n            \"email\": \"seth@gmail.com\",\n            \"image\": null,\n            \"role\": \"PROVIDER\"\n        },\n        \"gear\": {\n            \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n            \"title\": \"Trek Marlin 7 Mountain Bike\",\n            \"slug\": \"trek-marlin-7-mountain-bike\",\n            \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n            \"brand\": \"Trek\",\n            \"model\": \"Marlin 7 Gen 3\",\n            \"condition\": \"EXCELLENT\",\n            \"pricePerDay\": \"700\",\n            \"quantity\": 5,\n            \"availableQuantity\": 5,\n            \"images\": [\n                \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n            ],\n            \"specifications\": {\n                \"frame\": \"Aluminum\",\n                \"gears\": \"18-Speed\",\n                \"brakes\": \"Hydraulic Disc\",\n                \"weight\": \"13.8 kg\",\n                \"material\": \"Aluminum Alloy\",\n                \"wheelSize\": \"29 inches\",\n                \"suspension\": \"Front Suspension\"\n            },\n            \"location\": \"Chittagong, Bangladesh\",\n            \"isAvailable\": true,\n            \"status\": \"APPROVED\",\n            \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n            \"updatedAt\": \"2026-07-11T07:58:56.051Z\"\n        },\n        \"payment\": null,\n        \"reviews\": []\n    }\n}"
             }
           ]
         }
@@ -1055,7 +1571,22 @@
           "name": "Create Checkout Session",
           "request": {
             "method": "POST",
-            "header": [],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
               "raw": "{{base_url}}/api/payments/create",
               "host": [
@@ -1066,14 +1597,30 @@
                 "payments",
                 "create"
               ]
-            }
+            },
+            "description": "Creates a Stripe Checkout Session for the specified rental order.\n\nAuthentication Required.\n\nRole:  \n• Customer\n\nReturns the Stripe Checkout URL."
           },
           "response": [
             {
               "name": "Create Checkout Session",
               "originalRequest": {
                 "method": "POST",
-                "header": [],
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
                 "url": {
                   "raw": "{{base_url}}/api/payments/create",
                   "host": [
@@ -1112,11 +1659,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:16:47 GMT"
+                  "value": "Sat, 11 Jul 2026 10:37:29 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"88-1H2DYbyZzv//76ZjUw5x+DYM0yE\""
+                  "value": "W/\"83d-GwgXGiSR4HXQIZZnltw3mecU8yA\""
                 },
                 {
                   "key": "server",
@@ -1140,15 +1687,303 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::wqcbq-1783599370080-5c94aa5382c4"
+                  "value": "bom1::iad1::p87x9-1783766232307-6b7607a285a7"
                 },
                 {
                   "key": "content-length",
-                  "value": "136"
+                  "value": "2109"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Cannot destructure property 'rentalOrderId' of '(intermediate value)' as it is undefined.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Invalid API Key provided: sk_test_********************************************************************************5aGz\",\n    \"errors\": {\n        \"type\": \"StripeAuthenticationError\",\n        \"raw\": {\n            \"message\": \"Invalid API Key provided: sk_test_********************************************************************************5aGz\",\n            \"type\": \"invalid_request_error\",\n            \"headers\": {\n                \"server\": \"nginx\",\n                \"date\": \"Sat, 11 Jul 2026 10:37:29 GMT\",\n                \"content-type\": \"application/json\",\n                \"content-length\": \"194\",\n                \"connection\": \"keep-alive\",\n                \"access-control-allow-credentials\": \"true\",\n                \"access-control-allow-methods\": \"GET, HEAD, PUT, PATCH, POST, DELETE\",\n                \"access-control-allow-origin\": \"*\",\n                \"access-control-expose-headers\": \"Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required\",\n                \"access-control-max-age\": \"300\",\n                \"cache-control\": \"no-cache, no-store\",\n                \"content-security-policy\": \"base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests\",\n                \"vary\": \"Origin\",\n                \"www-authenticate\": \"Bearer realm=\\\"Stripe\\\"\",\n                \"x-robots-tag\": \"none\",\n                \"x-wc\": \"383\",\n                \"strict-transport-security\": \"max-age=63072000; includeSubDomains; preload\"\n            },\n            \"statusCode\": 401\n        },\n        \"rawType\": \"invalid_request_error\",\n        \"headers\": {\n            \"server\": \"nginx\",\n            \"date\": \"Sat, 11 Jul 2026 10:37:29 GMT\",\n            \"content-type\": \"application/json\",\n            \"content-length\": \"194\",\n            \"connection\": \"keep-alive\",\n            \"access-control-allow-credentials\": \"true\",\n            \"access-control-allow-methods\": \"GET, HEAD, PUT, PATCH, POST, DELETE\",\n            \"access-control-allow-origin\": \"*\",\n            \"access-control-expose-headers\": \"Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required\",\n            \"access-control-max-age\": \"300\",\n            \"cache-control\": \"no-cache, no-store\",\n            \"content-security-policy\": \"base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests\",\n            \"vary\": \"Origin\",\n            \"www-authenticate\": \"Bearer realm=\\\"Stripe\\\"\",\n            \"x-robots-tag\": \"none\",\n            \"x-wc\": \"383\",\n            \"strict-transport-security\": \"max-age=63072000; includeSubDomains; preload\"\n        },\n        \"statusCode\": 401\n    }\n}"
+            },
+            {
+              "name": "Create Checkout Session",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/payments/create",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "create"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 12:42:11 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"236-RzUzIwy4ipQ7aASFcdgWjYRT+Nw\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::9xplz-1783773729944-b897166e3ddc"
+                },
+                {
+                  "key": "content-length",
+                  "value": "566"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payment session created successfully.\",\n    \"data\": \"https://checkout.stripe.com/c/pay/cs_test_a1rnk1DFc5RD7X3ipUJeD9ivWwEUYeFxCiUKyNkf5yiiyg3EXiFZAgkBZ9#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdicGRmZGhqaWBTZHdsZGtxJz8nZmprcXdqaScpJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRWU2xzT0wxUzRmf11KS3FCR0hWQEdLPTVHYTxpVmhHYEtkV1JQaHE3MHw2SnFOY3BJMDxMaUlvdG5uNnE1MD1wTjVgUFdIMTRQNHM3NWY1czBcZ2J0NWY1NWZJUF9zXGJyJyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJmNjY2NjYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl\"\n}"
+            },
+            {
+              "name": "Create Checkout Session",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/payments/create",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 13:04:27 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"94-Ejuu0WweN8I56bIW7U1qVGaqZa0\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::p2fpq-1783775067696-832a379a4cc9"
+                },
+                {
+                  "key": "content-length",
+                  "value": "148"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Cannot destructure property 'rentalOrderId' of '(intermediate value)' as it is undefined.\",\n    \"errors\": {}\n}"
+            },
+            {
+              "name": "Create Checkout Session",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/payments/create",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 13:05:44 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"63-XqJhuXeIspbkPIT09L/Q1z1MldQ\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::bmjzh-1783775143654-580e4e8397ef"
+                },
+                {
+                  "key": "content-length",
+                  "value": "99"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"This rental order has already been paid.\",\n    \"errors\": {}\n}"
             }
           ]
         },
@@ -1158,19 +1993,17 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "https://gear-up-psi.vercel.app/api/payments/confirm",
-              "protocol": "https",
+              "raw": "{{base_url}}/api/payments/confirm",
               "host": [
-                "gear-up-psi",
-                "vercel",
-                "app"
+                "{{base_url}}"
               ],
               "path": [
                 "api",
                 "payments",
                 "confirm"
               ]
-            }
+            },
+            "description": "Receives Stripe webhook events.\n\nInternal endpoint.\n\nUsed to verify completed payments and update payment and rental order status automatically."
           },
           "response": []
         },
@@ -1188,7 +2021,8 @@
                 "api",
                 "payments"
               ]
-            }
+            },
+            "description": "Retrieves the authenticated customer's payment history.\n\nAuthentication Required.\n\nRole:  \n• Customer"
           },
           "response": [
             {
@@ -1237,11 +2071,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:18:59 GMT"
+                  "value": "Sat, 11 Jul 2026 14:07:02 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"58-flVHvZl8Ta9kTB0yJlD2+2TaW2I\""
+                  "value": "W/\"268-VbWxalRw2B6tjw8QFrtLOZhTOnE\""
                 },
                 {
                   "key": "server",
@@ -1265,15 +2099,15 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::kth27-1783599517280-8c0d373c2dcb"
+                  "value": "bom1::iad1::6q7tt-1783778822531-f21f090cef3e"
                 },
                 {
                   "key": "content-length",
-                  "value": "88"
+                  "value": "616"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payments retrieved successfully.\",\n    \"data\": []\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payments retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"30ec1293-6982-4f07-b451-5f829b30c5ce\",\n            \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n            \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n            \"transactionId\": \"cs_test_a1aKKThVde2pIhrGimOPcEYFBiD2HkiowpoG70QzmiuWA0mad5JA2MImLZ\",\n            \"paymentIntentId\": \"pi_3Ts1K8I4V1czXONt0OH4lREq\",\n            \"stripeCustomerId\": \"cus_UrkoBJCLj5neaJ\",\n            \"amount\": \"770\",\n            \"currency\": \"BDT\",\n            \"provider\": \"STRIPE\",\n            \"method\": \"CARD\",\n            \"status\": \"COMPLETED\",\n            \"paidAt\": \"1975-08-27T13:23:05.500Z\",\n            \"createdAt\": \"2026-07-11T13:52:12.356Z\",\n            \"updatedAt\": \"2026-07-11T13:52:12.356Z\"\n        }\n    ]\n}"
             }
           ]
         },
@@ -1283,22 +2117,17 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/payments/:id",
+              "raw": "{{base_url}}/api/payments/30ec1293-6982-4f07-b451-5f829b30c5ce",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "api",
                 "payments",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "30ec1293-6982-4f07-b451-5f829b30c5ce"
               ]
-            }
+            },
+            "description": "Retrieves details of a specific payment transaction.\n\nAuthentication Required.\n\nRole:  \n• Customer"
           },
           "response": [
             {
@@ -1391,6 +2220,91 @@
               ],
               "cookie": [],
               "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"Payment not found.\"\n}"
+            },
+            {
+              "name": "Payment Details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments/30ec1293-6982-4f07-b451-5f829b30c5ce",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "30ec1293-6982-4f07-b451-5f829b30c5ce"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "age",
+                  "value": "0"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 14:04:18 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"26d-uVZFID39nJyz5HBV0Q/NkYhgEtw\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::sljln-1783778658225-9da14026fc60"
+                },
+                {
+                  "key": "content-length",
+                  "value": "621"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Payment details retrieved successfully.\",\n    \"data\": {\n        \"id\": \"30ec1293-6982-4f07-b451-5f829b30c5ce\",\n        \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n        \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"transactionId\": \"cs_test_a1aKKThVde2pIhrGimOPcEYFBiD2HkiowpoG70QzmiuWA0mad5JA2MImLZ\",\n        \"paymentIntentId\": \"pi_3Ts1K8I4V1czXONt0OH4lREq\",\n        \"stripeCustomerId\": \"cus_UrkoBJCLj5neaJ\",\n        \"amount\": \"770\",\n        \"currency\": \"BDT\",\n        \"provider\": \"STRIPE\",\n        \"method\": \"CARD\",\n        \"status\": \"COMPLETED\",\n        \"paidAt\": \"1975-08-27T13:23:05.500Z\",\n        \"createdAt\": \"2026-07-11T13:52:12.356Z\",\n        \"updatedAt\": \"2026-07-11T13:52:12.356Z\"\n    }\n}"
             }
           ]
         }
@@ -1412,7 +2326,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"gearId\": \"cmctv7g4a0001u8q8m7x2d9kp\",\r\n  \"rentalOrderId\": \"cmctwhg2m0002u8q84x9s7kqr\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+              "raw": "{\r\n  \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\r\n  \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1428,7 +2342,8 @@
                 "api",
                 "reviews"
               ]
-            }
+            },
+            "description": "Creates a review for a completed rental.\n\nAuthentication Required.\n\nRole:  \n• Customer\n\nA review can only be submitted after the rental has been returned."
           },
           "response": [
             {
@@ -1525,6 +2440,291 @@
               ],
               "cookie": [],
               "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.review.create()` invocation:\\n\\n\\nForeign key constraint violated on the constraint: `reviews_gearId_fkey`\"\n}"
+            },
+            {
+              "name": "Review",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\r\n  \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/reviews",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reviews"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 10:50:55 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"21d-BTwAS4dAZZWJEbpBC0m1+1uMnuE\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::9ggz5-1783767054199-20b60064f391"
+                },
+                {
+                  "key": "content-length",
+                  "value": "541"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.review.create()` invocation:\\n\\n\\nUnique constraint failed on the fields: (`\\\"rentalOrderId\\\"`)\",\n    \"errors\": {\n        \"code\": \"P2002\",\n        \"meta\": {\n            \"modelName\": \"Review\",\n            \"driverAdapterError\": {\n                \"name\": \"DriverAdapterError\",\n                \"cause\": {\n                    \"originalCode\": \"23505\",\n                    \"originalMessage\": \"duplicate key value violates unique constraint \\\"reviews_rentalOrderId_key\\\"\",\n                    \"kind\": \"UniqueConstraintViolation\",\n                    \"constraint\": {\n                        \"fields\": [\n                            \"\\\"rentalOrderId\\\"\"\n                        ]\n                    }\n                }\n            }\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
+            },
+            {
+              "name": "Review",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\r\n  \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/reviews",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reviews"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 11:09:05 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"23e-/7zC+sbp4sXbOpH74TYpNovJudw\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::mh6w4-1783768141452-620514c83541"
+                },
+                {
+                  "key": "content-length",
+                  "value": "574"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Review created successfully.\",\n    \"data\": {\n        \"id\": \"2d1c3fd1-92db-4f27-932b-ea6ec7eb0356\",\n        \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n        \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n        \"rating\": 5,\n        \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\",\n        \"createdAt\": \"2026-07-11T11:09:05.899Z\",\n        \"updatedAt\": \"2026-07-11T11:09:05.899Z\"\n    }\n}"
+            },
+            {
+              "name": "Review",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\r\n  \"rentalOrderId\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\r\n  \"rating\": 5,\r\n  \"review\": \"The mountain bike was in excellent condition, clean, and performed perfectly throughout the rental period. The pickup process was smooth, and I would definitely rent from this provider again.\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/reviews",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reviews"
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 500
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 15:25:38 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"57-6aTj9pPrp8cmoz80xMVICSx6POU\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::ggqg8-1783783537281-3d79b5e79e7f"
+                },
+                {
+                  "key": "content-length",
+                  "value": "87"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"The rental was not returned.\",\n    \"errors\": {}\n}"
             }
           ]
         }
@@ -1537,10 +2737,16 @@
           "name": "Gear",
           "request": {
             "method": "POST",
-            "header": [],
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"categoryId\": \"cmctq5r0g0001u8q8d7k9m2ab\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
+              "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1557,7 +2763,8 @@
                 "provider",
                 "gear"
               ]
-            }
+            },
+            "description": "FragmentCreates a new gear listing.\n\nAuthentication Required.\n\nRole:  \n• Provider\n\nCondition:  \n• NEW  \n• EXCELLENT  \n• GOOD  \n• FAIR\n\nStatus:  \n• PENDING  \n• APPROVED  \n• REJECTED  \n• HIDDEN"
           },
           "response": [
             {
@@ -1567,7 +2774,103 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"categoryId\": \"cmctq5r0g0001u8q8d7k9m2ab\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
+                  "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/provider/gear",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "gear"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 06:24:43 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"492-8v6Pe+VTyhnRSMZtYlc2gRMlPs4\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::7jdnv-1783751079266-e7129b5ac3a3"
+                },
+                {
+                  "key": "content-length",
+                  "value": "1170"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 201,\n    \"message\": \"Gear added successfully.\",\n    \"data\": {\n        \"id\": \"431db1a8-201a-459a-813c-5d636f3674aa\",\n        \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n        \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n        \"title\": \"Trek Marlin 7 Mountain Bike\",\n        \"slug\": \"trek-marlin-7-mountain-bike\",\n        \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n        \"brand\": \"Trek\",\n        \"model\": \"Marlin 7 Gen 3\",\n        \"condition\": \"EXCELLENT\",\n        \"pricePerDay\": \"700\",\n        \"quantity\": 5,\n        \"availableQuantity\": 5,\n        \"images\": [\n            \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n            \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n            \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n        ],\n        \"specifications\": {\n            \"frame\": \"Aluminum\",\n            \"gears\": \"18-Speed\",\n            \"brakes\": \"Hydraulic Disc\",\n            \"weight\": \"13.8 kg\",\n            \"material\": \"Aluminum Alloy\",\n            \"wheelSize\": \"29 inches\",\n            \"suspension\": \"Front Suspension\"\n        },\n        \"location\": \"Chattogram, Bangladesh\",\n        \"isAvailable\": true,\n        \"status\": \"APPROVED\",\n        \"createdAt\": \"2026-07-11T06:24:43.335Z\",\n        \"updatedAt\": \"2026-07-11T06:24:43.335Z\"\n    }\n}"
+            },
+            {
+              "name": "Gear",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chattogram, Bangladesh\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -1612,11 +2915,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:46:25 GMT"
+                  "value": "Sat, 11 Jul 2026 07:14:07 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"201-uGKIVUPI4yR1sm3KY7nRDSUK6vo\""
                 },
                 {
                   "key": "server",
@@ -1640,25 +2943,40 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::62rq4-1783601181315-dd0d119c9338"
+                  "value": "bom1::iad1::tk4pj-1783754047384-d2882407ef6a"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "513"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.gearItem.create()` invocation:\\n\\n\\nUnique constraint failed on the fields: (`slug`)\",\n    \"errors\": {\n        \"code\": \"P2002\",\n        \"meta\": {\n            \"modelName\": \"GearItem\",\n            \"driverAdapterError\": {\n                \"name\": \"DriverAdapterError\",\n                \"cause\": {\n                    \"originalCode\": \"23505\",\n                    \"originalMessage\": \"duplicate key value violates unique constraint \\\"gear_items_slug_key\\\"\",\n                    \"kind\": \"UniqueConstraintViolation\",\n                    \"constraint\": {\n                        \"fields\": [\n                            \"slug\"\n                        ]\n                    }\n                }\n            }\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
             }
           ]
         },
         {
           "name": "My Gear",
           "request": {
-            "method": "PUT",
-            "header": [],
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chittagong, Bangladesh\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "{{base_url}}/api/provider/gear/:id",
+              "raw": "{{base_url}}/api/provider/gear/46f7dc36-988f-4880-9538-a0e36a987990",
               "host": [
                 "{{base_url}}"
               ],
@@ -1666,24 +2984,34 @@
                 "api",
                 "provider",
                 "gear",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "46f7dc36-988f-4880-9538-a0e36a987990"
               ]
-            }
+            },
+            "description": "Updates an existing gear listing.\n\nAuthentication Required.\n\nRole:  \n• Provider\n\nOnly the owner of the gear can update it."
           },
           "response": [
             {
               "name": "My Gear",
               "originalRequest": {
-                "method": "PUT",
-                "header": [],
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Dhaka, Bangladesh\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
                 "url": {
-                  "raw": "{{base_url}}/api/provider/gear/:id",
+                  "raw": "{{base_url}}/api/provider/gear/46f7dc36-988f-4880-9538-a0e36a987990",
                   "host": [
                     "{{base_url}}"
                   ],
@@ -1691,13 +3019,7 @@
                     "api",
                     "provider",
                     "gear",
-                    ":id"
-                  ],
-                  "variable": [
-                    {
-                      "key": "id",
-                      "value": ""
-                    }
+                    "46f7dc36-988f-4880-9538-a0e36a987990"
                   ]
                 }
               },
@@ -1727,11 +3049,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:48:20 GMT"
+                  "value": "Sat, 11 Jul 2026 15:29:24 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"178-YB3/QgAxueMZI8uKIQGHY6oOLUs\""
                 },
                 {
                   "key": "server",
@@ -1755,15 +3077,112 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::2hjsl-1783601290727-0ba3bfcc6e7c"
+                  "value": "bom1::iad1::d5dmm-1783783763605-f0469eafc68c"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "376"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.gearItem.update()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for an update.\",\n    \"errors\": {\n        \"code\": \"P2025\",\n        \"meta\": {\n            \"modelName\": \"GearItem\",\n            \"operation\": \"an update\"\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
+            },
+            {
+              "name": "My Gear",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\r\n  \"title\": \"Trek Marlin 7 Mountain Bike\",\r\n  \"slug\": \"trek-marlin-7-mountain-bike\",\r\n  \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\r\n  \"brand\": \"Trek\",\r\n  \"model\": \"Marlin 7 Gen 3\",\r\n  \"condition\": \"EXCELLENT\",\r\n  \"pricePerDay\": 700,\r\n  \"quantity\": 5,\r\n  \"images\": [\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\r\n    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\r\n  ],\r\n  \"specifications\": {\r\n    \"frame\": \"Aluminum\",\r\n    \"wheelSize\": \"29 inches\",\r\n    \"brakes\": \"Hydraulic Disc\",\r\n    \"gears\": \"18-Speed\",\r\n    \"suspension\": \"Front Suspension\",\r\n    \"material\": \"Aluminum Alloy\",\r\n    \"weight\": \"13.8 kg\"\r\n  },\r\n  \"location\": \"Chittagong, Bangladesh\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/provider/gear/46f7dc36-988f-4880-9538-a0e36a987990",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "gear",
+                    "46f7dc36-988f-4880-9538-a0e36a987990"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 15:30:46 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"494-staTezZQnhWYYl10z5J3wCJhoUw\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::glvs5-1783783841454-27f16ba2bbeb"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gear updated successfully.\",\n    \"data\": {\n        \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n        \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n        \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n        \"title\": \"Trek Marlin 7 Mountain Bike\",\n        \"slug\": \"trek-marlin-7-mountain-bike\",\n        \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n        \"brand\": \"Trek\",\n        \"model\": \"Marlin 7 Gen 3\",\n        \"condition\": \"EXCELLENT\",\n        \"pricePerDay\": \"700\",\n        \"quantity\": 5,\n        \"availableQuantity\": 5,\n        \"images\": [\n            \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n            \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n            \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n        ],\n        \"specifications\": {\n            \"frame\": \"Aluminum\",\n            \"gears\": \"18-Speed\",\n            \"brakes\": \"Hydraulic Disc\",\n            \"weight\": \"13.8 kg\",\n            \"material\": \"Aluminum Alloy\",\n            \"wheelSize\": \"29 inches\",\n            \"suspension\": \"Front Suspension\"\n        },\n        \"location\": \"Chittagong, Bangladesh\",\n        \"isAvailable\": true,\n        \"status\": \"APPROVED\",\n        \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n        \"updatedAt\": \"2026-07-11T15:30:46.752Z\"\n    }\n}"
             }
           ]
         },
@@ -1773,7 +3192,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/api/provider/gear/:id",
+              "raw": "{{base_url}}/api/provider/gear/e64d9d61-4b3b-49a8-81c8-41135a2c2f71",
               "host": [
                 "{{base_url}}"
               ],
@@ -1781,15 +3200,10 @@
                 "api",
                 "provider",
                 "gear",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "e64d9d61-4b3b-49a8-81c8-41135a2c2f71"
               ]
-            }
+            },
+            "description": "Deletes an existing gear listing.\n\nAuthentication Required.\n\nRole:  \n• Provider\n\nOnly the owner of the gear can delete it."
           },
           "response": [
             {
@@ -1798,7 +3212,7 @@
                 "method": "DELETE",
                 "header": [],
                 "url": {
-                  "raw": "{{base_url}}/api/provider/gear/:id",
+                  "raw": "{{base_url}}/api/provider/gear/e64d9d61-4b3b-49a8-81c8-41135a2c2f71",
                   "host": [
                     "{{base_url}}"
                   ],
@@ -1806,23 +3220,17 @@
                     "api",
                     "provider",
                     "gear",
-                    ":id"
-                  ],
-                  "variable": [
-                    {
-                      "key": "id",
-                      "value": ""
-                    }
+                    "e64d9d61-4b3b-49a8-81c8-41135a2c2f71"
                   ]
                 }
               },
-              "status": "Internal Server Error",
-              "code": 500,
-              "_postman_previewlanguage": null,
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
               "header": [
                 {
                   "key": ":status",
-                  "value": 500
+                  "value": 200
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -1842,11 +3250,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:52:05 GMT"
+                  "value": "Sat, 11 Jul 2026 11:38:52 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"52-paR6QNUQh4upIAKuV8zuHuuBjxI\""
                 },
                 {
                   "key": "server",
@@ -1870,15 +3278,21 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::2tmk4-1783601472459-8b925c01767b"
+                  "value": "bom1::iad1::tt9hs-1783769932609-2be4c3ce92da"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "82"
                 }
               ],
-              "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gear removed successfully.\"\n}"
             }
           ]
         },
@@ -1897,7 +3311,8 @@
                 "provider",
                 "orders"
               ]
-            }
+            },
+            "description": "Retrieves all rental orders for the authenticated provider's gear.\n\nAuthentication Required.\n\nRole:  \n• Provider"
           },
           "response": [
             {
@@ -1917,13 +3332,13 @@
                   ]
                 }
               },
-              "status": "Internal Server Error",
-              "code": 500,
+              "status": "OK",
+              "code": 200,
               "_postman_previewlanguage": null,
               "header": [
                 {
                   "key": ":status",
-                  "value": 500
+                  "value": 200
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -1947,11 +3362,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:54:47 GMT"
+                  "value": "Sat, 11 Jul 2026 11:36:50 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"29a-cMwiOpOaicRLuLaxRtWkGuCc6ks\""
                 },
                 {
                   "key": "server",
@@ -1975,15 +3390,15 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::zndf9-1783601686664-459b4c910cd2"
+                  "value": "bom1::iad1::jwjhn-1783769810288-c766f54b079e"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "666"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Orders retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n            \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"quantity\": 1,\n            \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n            \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n            \"totalDays\": 1,\n            \"pricePerDay\": \"700\",\n            \"subtotal\": \"700\",\n            \"serviceFee\": \"70\",\n            \"totalAmount\": \"770\",\n            \"status\": \"PLACED\",\n            \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n            \"notes\": \"Will pick up in the afternoon.\",\n            \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n            \"updatedAt\": \"2026-07-11T08:06:32.050Z\"\n        }\n    ]\n}"
             }
           ]
         },
@@ -2024,9 +3439,107 @@
                   "value": ""
                 }
               ]
-            }
+            },
+            "description": "Updates the status of a rental order.  \n  \nAuthentication Required.  \n  \nRole:  \n• Provider  \n  \nOnly the provider assigned to the gear can update the order status."
           },
           "response": [
+            {
+              "name": "Rental Order Status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"RETURNED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/provider/orders/8c2a8b58-4cfa-4411-a983-62fd5a7ddf40",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "provider",
+                    "orders",
+                    "8c2a8b58-4cfa-4411-a983-62fd5a7ddf40"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 11:42:20 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"2b2-r5rxMfqi5iKpAZi6v+0LYPx/NgA\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::grm9h-1783770140322-328f82132abc"
+                },
+                {
+                  "key": "content-length",
+                  "value": "690"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Order status updated successfully.\",\n    \"data\": {\n        \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n        \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n        \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n        \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n        \"quantity\": 1,\n        \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n        \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n        \"totalDays\": 1,\n        \"pricePerDay\": \"700\",\n        \"subtotal\": \"700\",\n        \"serviceFee\": \"70\",\n        \"totalAmount\": \"770\",\n        \"status\": \"RETURNED\",\n        \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n        \"notes\": \"Will pick up in the afternoon.\",\n        \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n        \"updatedAt\": \"2026-07-11T11:42:20.824Z\",\n        \"updateStatus\": true\n    }\n}"
+            },
             {
               "name": "Rental Order Status",
               "originalRequest": {
@@ -2092,11 +3605,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 13:04:44 GMT"
+                  "value": "Sat, 11 Jul 2026 11:43:32 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"17e-BVL+ZwC/K5ciKLYw0pYkCLza+QA\""
                 },
                 {
                   "key": "server",
@@ -2120,15 +3633,15 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::v7b6r-1783602281707-dc1f82e34551"
+                  "value": "bom1::iad1::hh6hm-1783770212321-f00e17ce211d"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "382"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.rentalOrder.update()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for an update.\",\n    \"errors\": {\n        \"code\": \"P2025\",\n        \"meta\": {\n            \"modelName\": \"RentalOrder\",\n            \"operation\": \"an update\"\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
             }
           ]
         }
@@ -2152,95 +3665,10 @@
                 "admin",
                 "users"
               ]
-            }
+            },
+            "description": "Retrieves all registered users.\n\nAuthentication Required.\n\nRole:  \n• Admin"
           },
-          "response": [
-            {
-              "name": "Users",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "{{base_url}}/api/admin/users",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "api",
-                    "admin",
-                    "users"
-                  ]
-                }
-              },
-              "status": "Internal Server Error",
-              "code": 500,
-              "_postman_previewlanguage": null,
-              "header": [
-                {
-                  "key": ":status",
-                  "value": 500
-                },
-                {
-                  "key": "access-control-allow-credentials",
-                  "value": "true"
-                },
-                {
-                  "key": "access-control-allow-origin",
-                  "value": "https://gear-up-psi.vercel.app"
-                },
-                {
-                  "key": "age",
-                  "value": "0"
-                },
-                {
-                  "key": "cache-control",
-                  "value": "public, max-age=0, must-revalidate"
-                },
-                {
-                  "key": "content-type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "date",
-                  "value": "Thu, 09 Jul 2026 12:57:47 GMT"
-                },
-                {
-                  "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
-                },
-                {
-                  "key": "server",
-                  "value": "Vercel"
-                },
-                {
-                  "key": "strict-transport-security",
-                  "value": "max-age=63072000; includeSubDomains; preload"
-                },
-                {
-                  "key": "vary",
-                  "value": "Origin"
-                },
-                {
-                  "key": "x-powered-by",
-                  "value": "Express"
-                },
-                {
-                  "key": "x-vercel-cache",
-                  "value": "MISS"
-                },
-                {
-                  "key": "x-vercel-id",
-                  "value": "bom1::iad1::cvchr-1783601861730-c474680d7aba"
-                },
-                {
-                  "key": "content-length",
-                  "value": "111"
-                }
-              ],
-              "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
-            }
-          ]
+          "response": []
         },
         {
           "name": "User Status",
@@ -2263,7 +3691,7 @@
               }
             },
             "url": {
-              "raw": "{{base_url}}/api/admin/users/:id",
+              "raw": "{{base_url}}/api/admin/users/6",
               "host": [
                 "{{base_url}}"
               ],
@@ -2271,15 +3699,10 @@
                 "api",
                 "admin",
                 "users",
-                ":id"
-              ],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": ""
-                }
+                "6"
               ]
-            }
+            },
+            "description": "Updates a user's account status.\n\nAuthentication Required.\n\nRole:  \n• Admin\n\nStatus:  \n• ACTIVE:  \n• SUSPENDED"
           },
           "response": [
             {
@@ -2303,7 +3726,7 @@
                   }
                 },
                 "url": {
-                  "raw": "{{base_url}}/api/admin/users/:id",
+                  "raw": "{{base_url}}/api/admin/users/65f0dcf1-f471-42dd-a551-515c6914e064",
                   "host": [
                     "{{base_url}}"
                   ],
@@ -2311,13 +3734,104 @@
                     "api",
                     "admin",
                     "users",
-                    ":id"
-                  ],
-                  "variable": [
-                    {
-                      "key": "id",
-                      "value": ""
+                    "65f0dcf1-f471-42dd-a551-515c6914e064"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "access-control-allow-credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "https://gear-up-psi.vercel.app"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 11 Jul 2026 16:11:33 GMT"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1d1-l+H6j+eHoetLJj9QLn94PzffeSU\""
+                },
+                {
+                  "key": "server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=63072000; includeSubDomains; preload"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "x-vercel-cache",
+                  "value": "MISS"
+                },
+                {
+                  "key": "x-vercel-id",
+                  "value": "bom1::iad1::2z6pl-1783786293150-9520631b0f9f"
+                },
+                {
+                  "key": "content-length",
+                  "value": "465"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"User updated successfully.\",\n    \"data\": {\n        \"id\": \"65f0dcf1-f471-42dd-a551-515c6914e064\",\n        \"name\": \"Tim Doe\",\n        \"email\": \"tim@gmail.com\",\n        \"password\": \"$2b$10$xj93AFpX7z1EkHQBOVfCYuajSC00Y6xXqwfpcv/qauFi6MDcE1oXS\",\n        \"phone\": null,\n        \"image\": null,\n        \"role\": \"CUSTOMER\",\n        \"status\": \"SUSPENDED\",\n        \"isVerified\": false,\n        \"address\": null,\n        \"city\": null,\n        \"country\": null,\n        \"createdAt\": \"2026-07-10T18:35:06.794Z\",\n        \"updatedAt\": \"2026-07-11T16:11:33.796Z\",\n        \"updatedStatus\": true\n    }\n}"
+            },
+            {
+              "name": "User Status",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"status\": \"SUSPENDED\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
                     }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users/6",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users",
+                    "6"
                   ]
                 }
               },
@@ -2347,11 +3861,11 @@
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 13:02:16 GMT"
+                  "value": "Sat, 11 Jul 2026 16:11:53 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"177-aYKlLlm02PxhDqUADJZU1NYTdOc\""
                 },
                 {
                   "key": "server",
@@ -2375,15 +3889,15 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::d6djq-1783602077054-cb04dbe635a9"
+                  "value": "bom1::iad1::dgpd8-1783786312535-6f1173c0f6af"
                 },
                 {
                   "key": "content-length",
-                  "value": "111"
+                  "value": "375"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"\\nInvalid `prisma.user.findUniqueOrThrow()` invocation:\\n\\n\\nAn operation failed because it depends on one or more records that were required but not found. No record was found for a query.\",\n    \"errors\": {\n        \"code\": \"P2025\",\n        \"meta\": {\n            \"modelName\": \"User\",\n            \"operation\": \"a query\"\n        },\n        \"clientVersion\": \"7.8.0\",\n        \"name\": \"PrismaClientKnownRequestError\"\n    }\n}"
             }
           ]
         },
@@ -2402,7 +3916,8 @@
                 "admin",
                 "gears"
               ]
-            }
+            },
+            "description": "Retrieves all gear listings.\n\nAuthentication Required.\n\nRole:  \n• Admin"
           },
           "response": [
             {
@@ -2422,13 +3937,13 @@
                   ]
                 }
               },
-              "status": "Internal Server Error",
-              "code": 500,
+              "status": "OK",
+              "code": 200,
               "_postman_previewlanguage": null,
               "header": [
                 {
                   "key": ":status",
-                  "value": 500
+                  "value": 200
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -2447,16 +3962,20 @@
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
                   "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 13:02:43 GMT"
+                  "value": "Sat, 11 Jul 2026 15:27:10 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"95a-nHPikNYS4OGgXgHsf2pg2ZBIqwg\""
                 },
                 {
                   "key": "server",
@@ -2480,15 +3999,11 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::6f78s-1783602163630-a5f9a234c190"
-                },
-                {
-                  "key": "content-length",
-                  "value": "111"
+                  "value": "bom1::iad1::9rlw2-1783783629438-bab94e1d725e"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Gear listings retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n            \"title\": \"Trek Marlin 7 Mountain Bike\",\n            \"slug\": \"trek-marlin-7-mountain-bike\",\n            \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n            \"brand\": \"Trek\",\n            \"model\": \"Marlin 7 Gen 3\",\n            \"condition\": \"EXCELLENT\",\n            \"pricePerDay\": \"700\",\n            \"quantity\": 5,\n            \"availableQuantity\": 5,\n            \"images\": [\n                \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n                \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n            ],\n            \"specifications\": {\n                \"frame\": \"Aluminum\",\n                \"gears\": \"18-Speed\",\n                \"brakes\": \"Hydraulic Disc\",\n                \"weight\": \"13.8 kg\",\n                \"material\": \"Aluminum Alloy\",\n                \"wheelSize\": \"29 inches\",\n                \"suspension\": \"Front Suspension\"\n            },\n            \"location\": \"Chittagong, Bangladesh\",\n            \"isAvailable\": true,\n            \"status\": \"APPROVED\",\n            \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n            \"updatedAt\": \"2026-07-11T07:58:56.051Z\",\n            \"provider\": {\n                \"id\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"name\": \"Seth Doe\",\n                \"email\": \"seth@gmail.com\",\n                \"password\": \"$2b$10$X4EMLba20qzTVIhghGVlU.HeH.WlJiO4Lgf.lNwtMVt2FDu5N/tqe\",\n                \"phone\": null,\n                \"image\": null,\n                \"role\": \"PROVIDER\",\n                \"status\": \"ACTIVE\",\n                \"isVerified\": false,\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"createdAt\": \"2026-07-10T21:48:37.901Z\",\n                \"updatedAt\": \"2026-07-10T21:48:37.901Z\"\n            },\n            \"category\": {\n                \"id\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n                \"name\": \"Fishing\",\n                \"slug\": \"fishing\",\n                \"description\": \"Fishing rods and tackle.\",\n                \"image\": null,\n                \"createdAt\": \"2026-07-11T05:54:31.925Z\",\n                \"updatedAt\": \"2026-07-11T05:54:31.925Z\"\n            },\n            \"reviews\": [],\n            \"rentalOrders\": [\n                {\n                    \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n                    \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n                    \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                    \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n                    \"quantity\": 1,\n                    \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n                    \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n                    \"totalDays\": 1,\n                    \"pricePerDay\": \"700\",\n                    \"subtotal\": \"700\",\n                    \"serviceFee\": \"70\",\n                    \"totalAmount\": \"770\",\n                    \"status\": \"PLACED\",\n                    \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n                    \"notes\": \"Will pick up in the afternoon.\",\n                    \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n                    \"updatedAt\": \"2026-07-11T14:21:51.392Z\"\n                }\n            ]\n        }\n    ]\n}"
             }
           ]
         },
@@ -2507,7 +4022,8 @@
                 "admin",
                 "rentals"
               ]
-            }
+            },
+            "description": "Retrieves all rental orders across the platform.  \n  \nAuthentication Required.  \n  \nRole:  \n• Admin"
           },
           "response": [
             {
@@ -2527,13 +4043,13 @@
                   ]
                 }
               },
-              "status": "Internal Server Error",
-              "code": 500,
+              "status": "OK",
+              "code": 200,
               "_postman_previewlanguage": null,
               "header": [
                 {
                   "key": ":status",
-                  "value": 500
+                  "value": 200
                 },
                 {
                   "key": "access-control-allow-credentials",
@@ -2552,16 +4068,20 @@
                   "value": "public, max-age=0, must-revalidate"
                 },
                 {
+                  "key": "content-encoding",
+                  "value": "br"
+                },
+                {
                   "key": "content-type",
                   "value": "application/json; charset=utf-8"
                 },
                 {
                   "key": "date",
-                  "value": "Thu, 09 Jul 2026 13:03:16 GMT"
+                  "value": "Sat, 11 Jul 2026 15:27:57 GMT"
                 },
                 {
                   "key": "etag",
-                  "value": "W/\"6f-+jUKcKtaj++512OjrEJshL8/UNE\""
+                  "value": "W/\"9f7-LlN5+EkrHSbhnW5rnjR+xb33dO4\""
                 },
                 {
                   "key": "server",
@@ -2585,15 +4105,11 @@
                 },
                 {
                   "key": "x-vercel-id",
-                  "value": "bom1::iad1::htqdf-1783602196398-c8d34be56c1c"
-                },
-                {
-                  "key": "content-length",
-                  "value": "111"
+                  "value": "bom1::iad1::kpxwj-1783783676918-d30b80482918"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": false,\n    \"statusCode\": 500,\n    \"message\": \"As per you role, you are not authorized to access this resource.\"\n}"
+              "body": "{\n    \"success\": true,\n    \"statusCode\": 200,\n    \"message\": \"Rental Orders retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": \"8c2a8b58-4cfa-4411-a983-62fd5a7ddf40\",\n            \"customerId\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n            \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n            \"gearId\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n            \"quantity\": 1,\n            \"rentalStartDate\": \"2026-07-11T06:24:43.335Z\",\n            \"rentalEndDate\": \"2026-07-11T06:24:43.335Z\",\n            \"totalDays\": 1,\n            \"pricePerDay\": \"700\",\n            \"subtotal\": \"700\",\n            \"serviceFee\": \"70\",\n            \"totalAmount\": \"770\",\n            \"status\": \"PLACED\",\n            \"pickupAddress\": \"Nasirabad Housing Society, Chattogram\",\n            \"notes\": \"Will pick up in the afternoon.\",\n            \"createdAt\": \"2026-07-11T08:06:32.050Z\",\n            \"updatedAt\": \"2026-07-11T14:21:51.392Z\",\n            \"customer\": {\n                \"id\": \"36edc13d-5a92-4b9a-9a66-71ab76f884cb\",\n                \"name\": \"Finn Doe\",\n                \"email\": \"finn@gmail.com\",\n                \"password\": \"$2b$10$ZmJ/4JVQ82eVkMugwqxRaeDleDtIq.tWozQ2kWg1bV7jOnC/KBxvC\",\n                \"phone\": null,\n                \"image\": null,\n                \"role\": \"CUSTOMER\",\n                \"status\": \"ACTIVE\",\n                \"isVerified\": false,\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"createdAt\": \"2026-07-10T15:10:57.353Z\",\n                \"updatedAt\": \"2026-07-10T15:10:57.353Z\"\n            },\n            \"provider\": {\n                \"id\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"name\": \"Seth Doe\",\n                \"email\": \"seth@gmail.com\",\n                \"password\": \"$2b$10$X4EMLba20qzTVIhghGVlU.HeH.WlJiO4Lgf.lNwtMVt2FDu5N/tqe\",\n                \"phone\": null,\n                \"image\": null,\n                \"role\": \"PROVIDER\",\n                \"status\": \"ACTIVE\",\n                \"isVerified\": false,\n                \"address\": null,\n                \"city\": null,\n                \"country\": null,\n                \"createdAt\": \"2026-07-10T21:48:37.901Z\",\n                \"updatedAt\": \"2026-07-10T21:48:37.901Z\"\n            },\n            \"gear\": {\n                \"id\": \"46f7dc36-988f-4880-9538-a0e36a987990\",\n                \"providerId\": \"83fb23ab-1d62-448b-8e57-0fd8ebd3fdf5\",\n                \"categoryId\": \"569acc66-6f31-40b4-aac5-4a5e953d5013\",\n                \"title\": \"Trek Marlin 7 Mountain Bike\",\n                \"slug\": \"trek-marlin-7-mountain-bike\",\n                \"description\": \"A lightweight aluminum mountain bike suitable for trail riding and outdoor adventures. Well-maintained and serviced regularly.\",\n                \"brand\": \"Trek\",\n                \"model\": \"Marlin 7 Gen 3\",\n                \"condition\": \"EXCELLENT\",\n                \"pricePerDay\": \"700\",\n                \"quantity\": 5,\n                \"availableQuantity\": 5,\n                \"images\": [\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050001/gear/trek-marlin-front.jpg\",\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050002/gear/trek-marlin-side.jpg\",\n                    \"https://res.cloudinary.com/demo/image/upload/v1752050003/gear/trek-marlin-rear.jpg\"\n                ],\n                \"specifications\": {\n                    \"frame\": \"Aluminum\",\n                    \"gears\": \"18-Speed\",\n                    \"brakes\": \"Hydraulic Disc\",\n                    \"weight\": \"13.8 kg\",\n                    \"material\": \"Aluminum Alloy\",\n                    \"wheelSize\": \"29 inches\",\n                    \"suspension\": \"Front Suspension\"\n                },\n                \"location\": \"Chittagong, Bangladesh\",\n                \"isAvailable\": true,\n                \"status\": \"APPROVED\",\n                \"createdAt\": \"2026-07-11T07:58:14.632Z\",\n                \"updatedAt\": \"2026-07-11T07:58:56.051Z\"\n            },\n            \"payment\": null,\n            \"reviews\": []\n        }\n    ]\n}"
             }
           ]
         }

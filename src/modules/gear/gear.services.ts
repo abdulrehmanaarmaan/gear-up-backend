@@ -49,7 +49,15 @@ const getGearsFromDB = async (payload: IGearFilters) => {
 
         where,
         include: {
-            provider: true,
+            provider: {
+                select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                    role: true,
+                    image: true
+                }
+            },
             category: true,
             reviews: true,
             rentalOrders: true
