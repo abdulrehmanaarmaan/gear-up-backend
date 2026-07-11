@@ -4,7 +4,7 @@ import { prisma } from "./lib/prisma";
 
 const main = async () => {
     try {
-        await prisma.$connect();
+        await prisma.$connect()
 
         const { port } = config
 
@@ -14,9 +14,9 @@ const main = async () => {
     }
 
     catch {
-        await prisma.$disconnect();
-        process.exit(1);
-    };
+        await prisma.$disconnect()
+        process.exit(1)
+    }
 }
 
 main()
