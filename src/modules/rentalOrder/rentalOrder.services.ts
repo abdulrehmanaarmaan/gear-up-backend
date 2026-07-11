@@ -13,7 +13,7 @@ const createOrderInDB = async (payload: IRentalOrder, customerId: string) => {
     })
 
     if (!addedGear) {
-        throw new Error("Order not found based on the provided Gear id.")
+        throw new Error("Gear not found.")
     }
 
     const totalDays = differenceInCalendarDays(rentalEndDate, rentalStartDate) + 1
@@ -51,8 +51,24 @@ const getOrdersFromDB = async (customerId: string) => {
         },
 
         include: {
-            customer: true,
-            provider: true,
+            customer: {
+                select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                    role: true,
+                    image: true
+                }
+            },
+            provider: {
+                select: {
+                    id: true,
+                    name: true,
+                    email: true,
+                    role: true,
+                    image: true
+                }
+            },
             gear: true,
             payment: true,
             reviews: true
