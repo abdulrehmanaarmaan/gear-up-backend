@@ -43,6 +43,10 @@ const removeGear = catchAsync(async (req: Request, res: Response) => {
 
     const removedGear = await removeGearFromDB(params.id as string, user?.id!)
 
+    if (!removedGear) {
+        throw new Error("Failed to remove gear.")
+    }
+
     sendResponse(res, {
         success: true,
         statusCode: OK,
