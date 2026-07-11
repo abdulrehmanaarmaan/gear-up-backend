@@ -1,6 +1,6 @@
-import { RentalStatus } from "../../../generated/prisma/enums";
-import { prisma } from "../../lib/prisma";
-import { IReview } from "./review.interface";
+import { RentalStatus } from "../../../generated/prisma/enums"
+import { prisma } from "../../lib/prisma"
+import { IReview } from "./review.interface"
 
 export const createReviewInDB = async (payload: IReview, customerId: string) => {
 
